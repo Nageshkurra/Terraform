@@ -5,7 +5,7 @@ data "aws_ami" "centos" {
   owners           = ["973714476881"]
   }
   output "ami" {
-    value = data.aws_ami.centos.image_od
+    value = data.aws_ami.centos.image_id
   }
 resource "aws_instance" "web" {
   ami           = "ami-0b5a2b5b8f2be4ec2"
